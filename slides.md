@@ -5,7 +5,7 @@ fonts:
   serif: 'Roboto Slab'
   mono: 'JetBrains Mono'
 
-theme: academic 
+theme: default 
 
 download: true
 
@@ -14,542 +14,860 @@ class: 'text-center'
 # https://sli.dev/custom/highlighters.html
 highlighter: shiki
 # show line numbers in code blocks
-lineNumbers: true
-# persist drawings in exports and build
+lineNumbers: true # persist drawings in exports and build
 drawings:
   persist: false
 # css: unocss
 ---
 
-## Identifying Hierarchical Structure in Sequences: <br> A linear time algorithm
+## Eine kulinarische Reise durch China
 
-*Craig G. Nevill-Manning · Ian H. Witten*
+*Vortrag von Magnus Viernickel*
 
----
+<br><br><br><br>
+> Die chinesische Küche umfasst eine Reihe von Kochschulen, 
+> die ursprünglich aus China stammen. Sie beeinflusste und beeinflusst 
+> noch heute viele andere Küchen in ganz Asien. Traditionelle, chinesische
+> Grundnahrungsmittel können heute weltweit gefunden werden. 
 
-# structure
+--- 
+
+# Gliederung 
 
 <v-clicks>
 
-0. structure
-1. motivation
-3. algorithm
-    1. concept
-    2. implementation
-    3. complexity
-4. evaluation
-    1. showcase
-    2. comparison to other compression algorithms
-    3. summary
+1. Eine kleine Geschichte der chinesischen Küche
+2. Essen in der chinesischen Gesellschaft
+3. Die 8 großen Schulen der chinesischen Küche
+    1. 廣東菜 - Guǎngdōng cài - Die Küche von Guangdong
+    2. 四川菜 - Sìchuān cài - Die Küche von Sichuan
+    3. 安徽菜 - Ānhuī cài - Die Küche von Anhui
+    4. 山東菜 - Shāndōngcài - Die Küche von Shangdong
+    5. 福建菜 - Fújiàn cài - Die Küche von Fujian
+    6. 江苏菜 - Jiāngsū cài - Die Küche von Jiangsu
+    7. 湖南菜 - Húnán cài - Die Küche von Hunan
+    8. 浙江菜 - Zhèjiāng cài - Die Küche von Zhejiang
+4. Die kulturellen Dimensionen nach Hofstede
 
 </v-clicks>
+
+--- 
+
+# Geschichte der chinesischen Küche 
+
+<v-clicks>
+
+- traditionelle chinesische Medizin als Ursprung
+- Süden: vorrangig Hirse, Norden: vorrangig Reis
+- 2000 v.Chr. Getreide
+- Konfuzius (551 - 479 v.Chr.)
+> der Reis würde nie zu weiß sein, das Fleisch nie zu fein geschnitten... Wenn nicht richtig gekocht war, aß man nicht. Wenn schlecht gekocht wurde, aß man nicht. Wenn das Fleisch nicht richtig geschnitten war, aß man nicht. Wenn das Essen nicht mit der richtigen Soße zubereitet wurde, aß man nicht. Obwohl es viele Fleischsorten gibt, sollten sie nicht mehr gekocht werden als Grundnahrungsmittel. Es gibt keine Grenze für Alkohol, bevor man man nicht betrunken wäre.  
+- Essen spendet **Qi**, erhält **Yin und Yang**, die **vier Naturen** und die **fünf Geschmacksrichtungen**
+- *Han Dynastie* (202 v.Chr. – 9 n.Chr. & 25 – 220 n.Chr.): Entwicklung von Techniken zur Konservierung von Militärrationen
+- *Südliche & Nördliche Dynastien* (420 - 581 n.Chr.): Vermischung der verschiedenen Kochschulen
+
+</v-clicks>
+
+<!--
+- vor 618 n. Chr.  
+- Die Küche wird zum kritischen Thema, da sie durch die traditionelle Medizin motiviert ist  
+- in Nordchina wurde als erstes [Hirse](https://en.wikipedia.org/wiki/Millet) angebaut  
+- [Reis](https://en.wikipedia.org/wiki/Rice) wurde im Süden angebaut  
+- 2000 v. Chr. kam der Weizen aus Westasien  
+- Adlige jagten wilde Tiere und aßen Hammelfleisch, Schweinefleisch, Hund  
+- Getreide wurde gelagert, Fleisch mit Salz, Essig und Gärung konserviert  
+- als Konfuzius lebte, war Essen eine hohe Kunst geworden  
+> der Reis würde nie zu weiß sein, das Fleisch nie zu fein geschnitten... 
+> Wenn nicht richtig gekocht war, aß man nicht. Wenn schlecht gekocht wurde, aß man nicht.
+> Wenn das Fleisch nicht richtig geschnitten war, aß man nicht. Wenn das Essen nicht mit der 
+> richtigen Soße zubereitet wurde, aß man nicht. Obwohl es viele Fleischsorten gibt, sollten 
+> sie nicht mehr gekocht werden als Grundnahrungsmittel. 
+> Es gibt keine Grenze für Alkohol, bevor man man nicht betrunken wäre.  
+
+- Während sich das chinesische Reich ausbreitete, wurde die Kochkunst vor allem an und über die 
+  Kanäle transportiert
+-->
+
+--- 
+layout: image-right
+image: https://upload.wikimedia.org/wikipedia/commons/9/91/Wu_Xing.png
+---
+
+### Die fünf Geschmacksrichtungen
+
+<v-clicks>
+
+- **Holz - sauer:** (*Essig, Orangen, Tomaten, Weizen & Huhn*)
+- **Feuer - bitter**
+  (*Rote Bete, Rucola, Roggen & Schafkäse*)
+- **Erde - süß**
+  (*Kartoffeln, Mais, Butter, Eier, Rindfleisch & Karotten.*)
+- **Metall - scharf**
+  (*Zwiebeln, Senf & Gänsebraten.*)
+- **Wasser - salzig**
+  (*Salz, Fisch, Hülsenfrüchte, Oliven & Wasser.*)
+
+</v-clicks>
+
+<!-- 
+- Lebensmittel sollten [Qi] (https://en.wikipedia.org/wiki/Qi) spenden, 
+  [Yin und Yang](https://en.wikipedia.org/wiki/Yin_and_yang) erhalten, die 
+  [vier Naturen](https://en.wikipedia.org/wiki/Chinese_herbology#Four_Natures) und die 
+  [fünf Geschmacksrichtungen](https://en.wikipedia.org/wiki/Chinese_herbology#Five_Flavors) ausgleichen  
+- während der [Han-Dynastie](https://en.wikipedia.org/wiki/Han_dynasty) entwickelten sich Zubereitungsmethoden für Militärrationen  
+- während der [südlichen und nördlichen Dynastien](https://en.wikipedia.org/wiki/Southern_and_Northern_dynasties), Mischung der Küchen  
+-->
+
+--- 
+layout: image-right
+image: https://upload.wikimedia.org/wikipedia/commons/5/58/Chinese_rice_congee.jpg
+---
+
+# Geschichte der chinesischen Küche
+
+<v-clicks>
+
+- *Song Dynastie* (960 - 1279): Migration sorgt dafür, dass Reis, Soja Soße und Congee (白粥, báizhōu) an Bedeutung gewinnen
+- *Yuan* (1279 - 1368) und *Qing* (1616 - 1919) Dynastien: Einfluss von mongolischer und muslimisch geprägter
+  Küche
+- Heutzutage: Vormarsch von Fastfood wie gebratene Nudeln, gebratener Reis, Gaifan (盖饭, gàifàn)
+
+</v-clicks>
+
+
+<!--
+
+nach 618 n. Chr.  
+- während der Song-Dynastie große Wanderungsbewegungen, die zu einer zunehmenden Bedeutung von Reis und Congee führten  
+- Sojasauce wird weit verbreitet  
+- während der Yuan- und der Qing-Dynastie großer Einfluss der mongolischen Küche und der Küche, die kein Schweinefleisch verwendete, da viele muslimische Gemeinschaften entstanden  
+- Heutzutage wird Fast Food wie [gebratene Nudeln](https://en.wikipedia.org/wiki/Fried_noodles), [gebratener Reis](https://en.wikipedia.org/wiki/Fried_rice) und [gaifan](https://en.wikipedia.org/wiki/Gaifan) immer beliebter (erhöhtes Lebenstempo)
+
+-->
+
+---
+layout: image
+image: https://upload.wikimedia.org/wikipedia/commons/2/2a/Khao_mu_krop_mu_daeng.jpg
+---
+## Gaifan - 盖饭 - gàifàn
 
 --- 
 layout: center
 ---
 
-# motivation 
-
-> what goal does `sequitur` pursue?
+# Essen in der chinesischen Gesellschaft
 
 <v-clicks>
 
-- infer structure from a *stream* of symbols
-- use this structure to compress the stream in a continuous/incremental manner
-- do it *fast* and *lossless* 
+- tiefe Verwurzelung in der chinesischen traditionellen Medizin
+- strenge Essetikette 
+- auch Teil von religiösen Akten (Verehrung der Verstorbenen)
+- Essen ist Statussymbol und Formalität am Essenstisch zeigt Beziehung zwischen Personen
+- traditionelles Essen an Frühlings- und Mondfest
 
 </v-clicks>
 
---- 
-layout: figure
-figureCaption: inferred structure for the same sentences in the (a) English, (b) French 
-  and (c) German bible
-figureUrl: inferred-structures-bible.png
----
-
-# motivation - bible
-
-<!-- 
-- we will use two rules to infer a context free grammar
-- on the picture: 
-  - **remark**: the whole thing was run on the whole corpus not 
-    just on this sentence (similarity to training in ML; could 
-    be seen as a form of unsupervised learning)
-  - inference of word boundaries (in German example complete)
-  - **beginning**: separated into: begin - ning
-  - **commencement**: separated into: commence - ment
-  - *this is a complete possible parsing of the sentence*
--->
-
---- 
-layout: figure
-figureCaption: inferred structure for (d) a sentence in the oslo-bergen corpus (e) chorales
-  by J.S. Bach
-figureUrl: inferred-structures-oslo-bergen-and-bach.png
----
-
-# motivation - corpus, chorales
-
-<!-- 
-- on the picture: 
-  - corpus
-    - *"sentiment would still favour the abolition"* as distinct block
-    - *"of the house of Lord"* as adjectival phrase
-  - chorale
-    - light grey boxes indicated repetition
-    - repeated motifs
-    - identifies the imperfect/perfect cadences
--->
-
-
---- 
-layout: center
----
-
-# algorithm
-
-> the `sequitur` algorithm
-
---- 
-
-## algorithm - concept: digram uniqueness
-
-> each digram appears at most once in the grammar
-
-
-<v-click>
-
-*observed:* `abcdbc` (`a[bc]d[bc]`)
-
-```haskell {1|3-4}
-S -> abcdbc  -- `bc` appears twice
-
-S -> aAdA    -- ensure digram uniqueness
-A -> bc
-```
-
-</v-click>
-
-<v-click>
-
-*observed:* `abcdbcabcdbcbc` (`[[a[bc]][d[bc]][[a[bc]][d[bc]]][bc]`)
-
-```haskell {1-3|5-7}
-S -> AAbc    -- `bc` appers in `S` and `B`
-A -> aBdB
-B -> bc
-
-S -> AAB     -- ensure digram uniqueness
-A -> aBdB
-B -> bc
-```
-
-</v-click>
-
----
-
-## algorithm - concept: rule utility
-
-> if a rule is only used once, we resubstitute to save space and 
-  extend the length of the rule
-
-<v-click>
-
-*observed:* `abcabc` (`[abc][abc]`)
-
-```haskell {1-2|4-6|8-9}
-S -> AcAc    -- `Ac` appears twice
-A -> ab
-
-S -> BB     -- digram uniqueness
-A -> ab     -- `A` only appears once
-B -> Ac     -- namely here 
-
-S -> BB 
-B -> abc    -- resubstitute 
-```
-
-</v-click>
-
-<v-click>
-
-*observed:* `abcdbcabcd` (`[a[bc]d][bc][a[bc]d]`)
-
-```haskell {1-4|6-8}
-S -> CAC
-A -> bc
-B -> aA      -- `B` is used only once
-C -> Bd      -- namely here
-
-S -> CAC
-A -> bc
-C -> aAd     -- resubstitute `aA` for `B`
-```
-
-</v-click>
-
---- 
-
-## algorithm - full example
-
-*observed:* `abcdbcabc` (`[a[bc]]d[bc][a[bc]]`)
-
-<v-click>
-
-```haskell 
-S -> BdAB
-A -> bc
-B -> aA
-```
-
-</v-click>
-
-<v-click>
-
-observe `d`
-</v-click>
-
-<v-click>
-
-*observed:* `abcdbcabcd` (`[a[bc]d][bc][a[bc]d]`)
-
-```haskell {1-3|5-8|10-12}
-S -> BdABd   -- append `d`, `Bd` appears twice
-A -> bc
-B -> aA
-
-A -> CAC     -- digram uniqueness
-A -> bc
-B -> aA      -- `B` only appears once
-C -> Bd      
-
-S -> CAC
-A -> bc
-C -> aAd     -- rule utility
-```
-
-</v-click>
-
-<!-- 
-- note: same example as before
-- this time with all the rules
--->
-
----
-layout: center
----
-
-# implementation
-
-> running `sequitur` on a machine
-
----
-
-## implementation - constraints
-
-<v-clicks>
-
-- *append* to `S`
-  - we need fast `snoc`
-- *use* a rule 
-  - substitute a non-terminal by any digram (this *shortens* the rule)
-- *create* a rule
-  - non-terminal on LHS
-  - digram on RHS
-- *delete* a rule
-  - move RHS to replace a non-terminal
-  - delete LHS
-
-</v-clicks>
-
----
-
-## implementation - datastructures
-
-<v-click>
-
-### grammar and digramindex
-
-```
- grammar (linked list)     │ digramindex (hashtable)
-           ┌───────────────┼────────┐
-           │               │        │
-      ┌────┼─────────┐     │        │
-      │    │         │     │        │
-┌─┐   ▼   ┌▼┐  ┌─┐  ┌┴┐    │ ┌────┐ │
-│A├─►┌┬┬─►│B├─►│c├─►│d│  ┌─┼─┤{cd}│ │
-└─┘  └─┘  └┬┘  └▲┘  └─┘  │ │ ├────┤ │
-           │    │        │ │ │{Bc}├─┘
- ┌─────────┘    └────────┘ │ ├────┤
- │                         │ │{ab}│
- │    ┌─────────┐          │ └──┬─┘
- │    │         │          │    │
-┌▼┐   ▼   ┌─┐  ┌┴┐         │    │
-│B├─►┌┬┬─►│a├─►│b│         │    │
-└─┘  └─┘  └▲┘  └─┘         │    │
-           │               │    │
-           └───────────────┼────┘
-                           │
-```
-
-</v-click>
-
-<!-- 
-- observe a new digram 
-- look it up in the digram index 
-- if it exists follow to the link
-- talk about digram reference counter? 
--->
-
-
---- 
-
-## implementation - example
-
-*observed:* `abcdbc` (`a[bc]d[bc]`)
-
-```haskell {1|3-4|6-7|9-10}
-S -> abcdbc  { ab, bc, cd, db } 
-
-S -> abcdbc  { ab, bc, cd, db }  -- create rule that produces `bc`
-A -> bc 
-
-S -> aAdbc   { bc, db, aA, Ad }  -- update `ab`, `cd`;  update `S` rule
-A -> bc
-
-S -> aAdA    { bc, dA, aC, Ad }  -- update `db`; update `S` rule
-A -> bc
-```
---- 
-
-## implementation - complexity
-
-
-```text {all|1|3-10|12-14|all}
-upon observation append symbol to `S` - Rule                   (1)
-
-entry in grammar rule is made:                                 (2)
-  if digram is repetition then 
-    if other occurence is rule then
-      replace digram by non-terminal of that rule              (3)
-    else
-      form new rule                                            (4)
-  else
-    insert digram into index
-
-digram replaced by a non-terminal:
-  if either symbol is non-terminal that only occurs once then 
-    remove rule substituting its LHS for observed non-terminal (5)
-```
-<v-clicks>
-
-- `(1)` performed exactly $n$ times 
-- `(2)` performed upon link creation
-- `(3)`,`(4)`,`(5)` with savings $1$, $0$, $1$ respectively
-
-</v-clicks>
-
-<!-- 
-- amortized (not per symbol but per sequence) 
-- per symbol it might be as bad as **O(sqrt n)** for **n** preceding input symbols
-
-- 1 append to srule 
-- 3-10 digram uniqueness
-- 12-14 rule utility
-
-- 3 using a rule
-- 4 adding a rule
-- 5 removing a rule
+<!--
+Essetikette:
+- junge warten auf alte Person
+- Schüssel nicht am Boden halten (Betteln)
+- Man isst mit Stäbchen
+- Stäbchen nicht vertikal in den Reis stecken (Totenritual) 
+- Messer sind unangebracht
+- mit den Stäbchen darf nicht gespielt oder in der Luft gewedelt werden
+- Teilen eines Tellers ist unhöflich
+- Nebenbeschäftigungen zeugen von schlechtem Geschmack 
+- Wenn eine Alte Person Essen an eine Jüngere abgibt, sollte diese der Älteren danken
+
+Anderes: 
+- Grundnahrungsmittel sagt über Herkunft aus
+- essenszeiten und Anzahl sind sehr ähnlich zu Europa
 -->
 
 --- 
 
-## implementation - complexity
+### Die 8 großen Schulen der chinesischen Küche
 
-<v-click>
+![regionale Küchen Chinas](https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Cuisines_of_China.png/800px-Cuisines_of_China.png)
 
-- $n$ - size of input
-- $o$ - size of final grammar
-- $r$ - number of rules in final grammar
+--- 
+layout: image-right
+image: https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Canton_Tower_20220626_%28cropped%29.jpg/1920px-Canton_Tower_20220626_%28cropped%29.jpg
+--- 
 
-</v-click>
+# 廣東菜 
+
+**Guǎngdōng cài - Die Küche von Guangdong**
 
 <v-clicks>
 
-- $a_1 - a_5$ actions `(1)`-`(5)` respectively
-- $n-o = a_3 - a_5$
-- $r = a_4 - a_5$
-- $r < o \equiv r - o < 0$ 
-- $a_5 = n-o-a_3 \lt n$
+- Guangdong Provinz - Hauptstadt Guangzhou, größtes urbanes Gebiet mit 65 Mio. Einwohnern, Hongkong, Macau
+- ausgewogener Geschmack, nicht fettig  
+- mäßiger Einsatz von Gewürzen, um den Geschmack der Zutaten nicht zu überlagern  
+- die Zutaten sollten frisch sein  
 
 </v-clicks>
 
-<v-click>
-
-$$\sum_{i = 1}^5 a_i = 2n + (r-o) + a_5 + a_2 \lt 3n+a_2$$
-
-</v-click>
-
- <!-- 
- - the size reduction of the grammar is equal to the amount of times that 3 and 5 are executed 
- - the number of rules is the amount of times that a rule is created minus the amount of times a rule 
- - the number of rules must be smaller than the size of the grammar
-   is deleted
- -  
- -->
+<!--
+- [Kantonesische Küche](https://en.wikipedia.org/wiki/Cantonese_cuisine)  
+- 廣東菜 - Guǎngdōng cài - Kantonesische Küche  
+- hauptsächlich in der Provinz Guangdong (Guangzhou (größte städtische Agglomeration mit 65 Millionen Einwohnern)), Karte anzeigen  
+- Perlflussdelta einschließlich Hongkong und Macau  
+- in der kantonesischen Küche ausgebildete Köche sind sehr gefragt  
+- *Hintergrund*  
+	- Guangzhou City war Handelszentrum und daher ein Ort, der viele Lebensmittel und Zutaten importierte; z.B. fast alle  
+	- alle Arten von Fleisch, einschließlich Froschschenkel, Entenzunge, Hühnerfüße, aber auch Rindfleisch, Huhn, Schweinefleisch  
+	- Braten, Dünsten, Frittieren  
+	- ausgewogene Geschmacksrichtungen, nicht fettig  
+	- mäßiger Einsatz von Gewürzen, um den Geschmack der Zutaten nicht zu überlagern  
+	- die Zutaten sollten frisch sein  
+	- nicht viele frische Kräuter wie in der Sichuanischen, Vietnamesischen, Laotischen und Thailändischen Küche  
+- *Nahrungsmittel*  
+	- Zucker, Salz, Sojasauce, Reiswein, Maisstärke, Essig, Frühlingszwiebeln, Sesamöl werden zur Geschmacksverstärkung verwendet  
+	- Knoblauch, Ingwer, Chilischoten, Fünf-Gewürze-Pulver, schwarzer Pfeffer, Sternanis werden verwendet  
+-->
 
 ---
+layout: image-right
+image: http://www.tastyislandhawaii.com/images14/eggs/century_egg.jpg
+---
 
-## implementation - complexity 
+# 廣東菜 
 
-<v-clicks>
-
-- $a_2$: check for duplicate digrams
-- with occupancy $\lt 80\%$ lookups are $\mathcal O (1)$
-- hashtable size smaller than grammar (which itself is linearly bounded by the input)
-- $a_2$ can only be executed, when either of $a_1, a_3 - a_5$ are run (bounded by $\mathcal O(n)$)
-
-- $a_2$: check for duplicate digrams
-
-</v-clicks>
-
-<v-click>
-
-$$\implies a_2 \in \mathcal O(n)$$
-
-</v-click>
-
-<v-click>
-
-<center> 
-
-**$\implies$ `sequitur` runs in $\mathcal O(n)$** 
-
-</center>
-
-</v-click>
-
-<v-click>
-
-*but*
-
-</v-click>
-
+Typische, konservierte Zutaten
 
 <v-clicks>
 
-- in theory the hashing and hence addressing will be $\mathcal O (\log n)$, remains stable up to $10^{19}$ symbols on 64bit 
-  archs (10 Exabytes if 1 Byte per symbol is assumed)
-- `sequitur` is also linear in memory
+- [Jahrhundert-Ei, 皮蛋, pídàn](https://en.wikipedia.org/wiki/Century_egg)  
+- [Gesalzenes Entenei, 咸蛋, xiándàn](https://en.wikipedia.org/wiki/Salted_duck_egg)  
+- [Chinesische Wurst, 腊肠, làcháng](https://en.wikipedia.org/wiki/Chinese_sausage)  
+- [Fermentierter Tofu, 腐乳, fǔrǔ](https://en.wikipedia.org/wiki/Fermented_bean_curd)  
 
 </v-clicks>
 
-<!-- 
-- size of input has to be known in advance - streaming? 
-- table has to be resized on the fly? still linear?
-- hashtable size smaller than grammar because 
-  - digramcount is same as symbols in grammar 
-  - 
+<p style="opacity: 0.5">
+Typische Soßen
+</p>
+
+<v-clicks>
+
+- [Schwarze Bohnensauce, 蒜蓉豆豉酱, suànróng dòuchǐjiàng](https://en.wikipedia.org/wiki/Douchi)  
+- [Char siu sauce, 叉烧酱, chāshāojiàng](https://en.wikipedia.org/wiki/Char_siu)  
+- [Hoisin-Sauce, 海鲜酱, hǎixiānjiàng](https://en.wikipedia.org/wiki/Hoisin_sauce)  
+- [Süß-saure Soße, 糖醋酱, tángcùjiàng](https://en.wikipedia.org/wiki/Sweet_and_sour#Chinese_cuisine)  
+
+</v-clicks>
+
+<!--
+	- typische konservierte Zutaten:  
+		- [Jahrhundert-Ei, 皮蛋, pídàn](https://en.wikipedia.org/wiki/Century_egg)  
+		- Gesalzenes Entenei, 咸蛋, xiándàn](https://en.wikipedia.org/wiki/Salted_duck_egg)  
+		- Chinesische Wurst, 腊肠, làcháng](https://en.wikipedia.org/wiki/Chinese_sausage)  
+		- [Fermentierter Tofu, 腐乳, fǔrǔ](https://en.wikipedia.org/wiki/Fermented_bean_curd)  
+	- typische Soßen:  
+		- [Schwarze Bohnensauce, 蒜蓉豆豉酱, suànróng dòuchǐjiàng](https://en.wikipedia.org/wiki/Douchi)  
+		- [Char siu sauce, 叉烧酱, chāshāojiàng](https://en.wikipedia.org/wiki/Char_siu)  
+		- [Hoisin-Sauce, 海鲜酱, hǎixiānjiàng](https://en.wikipedia.org/wiki/Hoisin_sauce)  
+		- [Süß-saure Soße, 糖醋酱, tángcùjiàng](https://en.wikipedia.org/wiki/Sweet_and_sour#Chinese_cuisine)  
 -->
 
 --- 
-layout: figure
-figureCaption: behaviour on English text; rules-symbols (a); grammar-symbols (b); vocabulary-symbols (c); time-symbols (d)
-figureUrl: linear-behaviour.png
+layout: image 
+image: https://upload.wikimedia.org/wikipedia/commons/d/db/Cuisine_of_China_0055.JPG
 ---
 
-## implementation - complexity
+# 广式炒饭
 
+ guǎng shì chǎofàn, Gebratener Reis nach kantonesischer Art
+
+<!--
+	- traditionelle Gerichte:  
+		- Gebratener Reis nach kantonesischer Art, 广式炒饭, guǎng shì chǎofàn ([Bild](https://en.wikipedia.org/wiki/File:Cuisine_of_China_0055.JPG))  
+-->
 --- 
-layout: center
+layout: image 
+image: https://upload.wikimedia.org/wikipedia/commons/4/46/Chinese_steamed_eggs_by_Kanko.jpg
 ---
 
-# evaluation
+# 蒸水蛋
 
-> how does `sequitur` perform?
-
---- 
-layout: figure
-figureUrl: sequitur-info-qr.png
-figureCaption: http://sequitur.info - JS-implementation by C. Nevill-Manning
----
-
-## evaluation - showcase 
-
----
-
-## evaluation - comparison
-<v-click>
-
-<br>
-
-> `sequitur` [..] outperfoms other schemes that achieve compression by factoring out repetition, and approaches performance of schemes that 
-  compress based on probabilistic predictions
-
-<br>
-
-</v-click>
-
-<v-clicks>
-
-- *linear in time* (cf. `Mk10`, $\mathcal O(n^2)$, Wolff, 1975)
-
-</v-clicks>
+zhēngshuǐdàn, Gedämpftes Ei
 
 
-<v-click>
-
-<br>
-
-*but*
-
-</v-click>
-
-<v-clicks>
-
-- linear in space 
-  - split input; merge grammars 
-  - $\mathcal O(\log n)$ memory 
-  - sacrifices digram uniqueness)
-- issues with hashtable 
-  - resizing (to maintain amortized $\mathcal O(1)$ `lookup` and `insert`) is costly
-
-</v-clicks>
-
-<!-- 
-- Wolffs algorithm forms sequitur rules if a digram is seen >10 times
+<!--
+- [Gedämpftes Ei, 蒸水蛋, zhēngshuǐdàn](https://en.wikipedia.org/wiki/Chinese_steamed_eggs) ([Bild](https://en.wikipedia.org/wiki/File:Chinese_steamed_eggs_(cropped).jpg))  
 -->
 
 --- 
-
-## evaluation - summary
-
-<v-click>
-
-Use two simple rules:
-- **digram uniqueness**
-- **rule utility**
-
-</v-click>
-<v-click>
-
-to achieve algorithm that compresses...
-- in $\mathcal O(n)$ **space** and **time**
-- **losslessly**
-
-</v-click>
-<v-click>
-
-which can be implemented...
-- by the use of **doubly linked lists**
-- and **hash tables**
-
-</v-click>
-
---- 
-layout: center
+layout: image
+image: https://upload.wikimedia.org/wikipedia/commons/c/c5/Rau_mu%E1%BB%91ng_x%C3%A0o_t%E1%BB%8Fi.jpg
 ---
 
-# Thank you for your attention
+# 椒丝腐乳通菜
+jiāosī fǔrǔ tōngcài, Gebratener Wasserspinat mit Chili und fermentiertem Tofu
 
-> questions welcome
+---
+layout: image-right
+image: https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Siu_lap_platter.jpg/1920px-Siu_lap_platter.jpg
+---
+
+# 燒臘
+
+ Shāo là, Siu laap
+
+<v-clicks>
+
+- [Siu mei, 燒味, sīuméi](https://en.wikipedia.org/wiki/Siu_mei), chinesische Rotisserie
+- [Lou mei, 滷水, lóuh séui](https://en.wikipedia.org/wiki/Lou_mei), Organe/ übrig gebliebene Teile
+
+</v-clicks>
+
+<!--
+		- Siu laap, 烧腊 einschließlich [Siu mei](https://en.wikipedia.org/wiki/Siu_mei) (chinesische Rotisserie) und [Lou mei](https://en.wikipedia.org/wiki/Lou_mei) (Organe, übrig gebliebene Teile)  
+-->
+
+---
+layout: image-right
+image: https://upload.wikimedia.org/wikipedia/commons/9/91/Chinese_cuisine-Shark_fin_soup-04.jpg
+---
+
+# 廣東菜 
+
+Andere Gerichte
+
+<v-clicks>
+
+- verschiedene frittierte Gerichte
+- Suppen
+- frische Meeresfrüchte 
+- Nudelgerichte
+- Delikatessen z.B.  
+    - [Qualle, 海蜇, hǎizhé](https://en.wikipedia.org/wiki/Jellyfish#Culinary)
+    - [Haifischflossensuppe, 鱼翅汤, yúchì tāng](https://en.wikipedia.org/wiki/Shark_fin_soup)
+
+</v-clicks>
+
+<!--
+		- [Congee](https://en.wikipedia.org/wiki/Congee) mit magerem Schweinefleisch und [Jahrhundert-Ei](https://en.wikipedia.org/wiki/Century_egg), 皮蛋瘦肉粥, pídàn shòuròuzhōu, ([Bild](https://en.wikipedia.org/wiki/File:Pork_preserved_duck_egg_congee.jpg))  
+		- Gebratener [Wasserspinat](https://en.wikipedia.org/wiki/Ipomoea_aquatica) mit geschreddertem Chili und fermentiertem Tofu, 椒丝腐乳通菜, jiāosī fǔrǔ tōngcài ([Bild](https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Rau_mu%E1%BB%91ng_x%C3%A0o_t%E1%BB%8Fi.jpg/150px-Rau_mu%E1%BB%91ng_x%C3%A0o_t%E1%BB%8Fi.jpg))  
+	- andere Gerichte  
+		- verschiedene frittierte Gerichte, Suppen, frische Meeresfrüchte (an der südchinesischen Meeresküste), Nudelgerichte (frittiert oder in einer Suppenbrühe),  
+		- Delikatessen, z.T. Teile von seltenen oder gefährdeten Tieren; löst Kontroversen aus ([Haifischflossensuppe, 鱼翅汤, yúchì tāng](https://en.wikipedia.org/wiki/Shark_fin_soup); die Behauptung, Haifischflossen würden Krebs heilen, wofür es keine Beweise gibt, fördert den Verkauf)  
+		- [Qualle, 海蜇, hǎizhé](https://en.wikipedia.org/wiki/Jellyfish#Culinary)
+-->
+
+--- 
+layout: image-right
+image: https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/%E9%BB%83%E9%BE%8D%E7%88%AD%E8%89%B7%E6%B1%A0%28Huanglong_Park%29.jpg/1920px-%E9%BB%83%E9%BE%8D%E7%88%AD%E8%89%B7%E6%B1%A0%28Huanglong_Park%29.jpg
+---
+
+# 四川菜
+
+Sìchuān cài - Die Küche von Sichuan
+
+<v-clicks>
+
+- "Land des Überflusses"
+- unverwechselbar, vielseitig
+- scharfer und würziger Geschmack, einige nicht-würzige Komplementäre  
+- Sichuan Chili kam aus Mexiko  
+- üppige und gewöhnliche Bankette, volkstümliche Speisen, Hausmannskost, Snacks  
+- wichtiger Teil der chinesisch-amerikanischen Küche
+
+</v-clicks>
+
+<!--
+- aus der [Provinz Sichuan](https://en.wikipedia.org/wiki/Sichuan), die wegen ihres Reichtums an natürlichen Ressourcen und Nahrungsmitteln "himmlisches Land" genannt wird  
+- *Hintergrund*  
+	- im Mittelalter vor allem mittelöstliche Feldfrüchte ([Saubohnen](https://en.wikipedia.org/wiki/Broad_beans), [Sesam](https://en.wikipedia.org/wiki/Sesame) und [Walnüsse](https://en.wikipedia.org/wiki/Walnuts))  
+	- die typische Chilischote kam aus Mexiko  
+	- Die vielseitige und komplexe Landschaft der Provinz hat dazu beigetragen, dass die Speisen dort unverwechselbar und vielseitig geworden sind.  
+	- Mais ersetzte hauptsächlich [Hirse](https://en.wikipedia.org/wiki/Millet)  
+	- scharfer und würziger Geschmack, einige nicht-würzige Gegenstücke  
+	- 5 Arten: üppige und gewöhnliche Bankette, volkstümliche Speisen, Hausmannskost, Snacks  
+	- die mildere Version der Sichuan-Küche ist zu einem wichtigen Bestandteil der amerikanischen chinesischen Küche geworden  
+	- Der Jangtse-Fluss bildet die Grundlage für  
+	- Reis, Gemüse, Pilze  
+	- das häufigste Fleisch ist Schweinefleisch, Rindfleisch ist weiter verbreitet als in anderen Küchen, verschiedene Organe werden verwendet, auch Kaninchen ist beliebt  
+	- viele eingelegte, gesalzene oder getrocknete Lebensmittel  
+-->
+
+---
+layout: image
+image: https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/5811-Linxia-City-north-plateau-Sichuan-pepper-shrub.jpg/1920px-5811-Linxia-City-north-plateau-Sichuan-pepper-shrub.jpg
+---
+
+# 花椒
+huājiāo, Sichuan-Pfeffer 'Blumenpfeffer'
+
+<!--
+	- wichtigstes und bekanntestes Gewürz ist der [Sichuan-Pfeffer](https://en.wikipedia.org/wiki/Sichuan_pepper) (花椒; huājiāo; 'Blumenpfeffer')  
+	- Sichuan-Hotpot als sehr beliebtes und repräsentatives Gericht aus Sichuan
+-->
+
+---
+layout: image
+image: https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Chengdu_double_hotpot.jpg/1920px-Chengdu_double_hotpot.jpg
+---
+
+# 火锅
+
+huǒguō, Sichuanesischer Feuertopf
+
+
+---
+layout: image
+image: https://i1.wp.com/redhousespice.com/wp-content/uploads/2017/06/Ants-climbing-a-tree-portrait1.jpg?resize=730,1298&ssl=1
+---
+
+#  蚂蚁上树
+
+mǎyǐshàngshù, Ameisen beklettern den Baum
+
+---
+layout: image
+image: https://upload.wikimedia.org/wikipedia/commons/2/22/Bon_bon_chicken_with_sauce.jpg
+---
+
+# 棒棒鸡
+
+bàngbàng jī, Bonbon Chicken
+
+---
+layout: image
+image: https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Hot_and_sour_noodles_with_pork_intestines.jpg/2560px-Hot_and_sour_noodles_with_pork_intestines.jpg
+--- 
+
+# 担担面
+
+dàndàn miàn, Dandan Nudeln
+
+---
+layout: image-right
+image: https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Ella_me_pregunt%C3%B3-_%C2%BFte_gusta%3F%3B_le_contest%C3%A9-_De_aqu%C3%AD_soy._%2815734147422%29.jpg/2560px-Ella_me_pregunt%C3%B3-_%C2%BFte_gusta%3F%3B_le_contest%C3%A9-_De_aqu%C3%AD_soy._%2815734147422%29.jpg
+---
+
+# 安徽菜 
+
+Ānhuī cài - Die Küche von Anhui
+
+<v-clicks>
+
+- Anhui Provinz in Ostchina, Huangshan Region
+- wilde Kräuter von Land und See
+- hauptsächlich schmoren und garen
+- Hauptstile: 
+    - Region [Jangtse-Fluss](https://en.wikipedia.org/wiki/Yangtze_River)  
+    - Region [Huai-Fluss](https://en.wikipedia.org/wiki/Huai_River)  
+    - südliche [Anhui](https://en.wikipedia.org/wiki/Anhui) Region  
+
+</v-clicks>
+
+<!--
+- 安徽菜 - Ānhuī cài - Anhui Küche  
+- *Hintergrund*  
+	- abgeleitet von einheimischen Kochstilen aus der [Huangshan](https://en.wikipedia.org/wiki/Huangshan) Region und der südlichen [Provinz Anhui](https://en.wikipedia.org/wiki/Anhui).  
+	- Verwendung von Wildkräutern vom Land und aus dem Meer, hauptsächlich Schmoren und Garen  
+	- drei Hauptstile  
+		- Region [Jangtse-Fluss](https://en.wikipedia.org/wiki/Yangtze_River)  
+		- Region [Huai-Fluss](https://en.wikipedia.org/wiki/Huai_River)  
+		- südliche [Anhui](https://en.wikipedia.org/wiki/Anhui) Region  
+-->
+
+---
+layout: image
+image: https://upload.wikimedia.org/wikipedia/commons/c/ca/Stinkender_Tofu_1.JPG
+---
+
+# 八公山臭豆腐
+
+bāgōngshān chòu dòufǔ, "stinkender Tofu"
+
+<!--
+- *Lebensmittel*  
+	- Bagongshan [stinkender Tofu, 八公山臭豆腐, bāgōngshān chòu dòufǔ](https://en.wikipedia.org/wiki/Stinky_tofu)  
+-->
+
+---
+layout: image
+image: https://www.chinesefoodwiki.org/images/6/62/Chop_Suey_%283%29.jpg
+---
+
+# 李鸿章杂碎
+
+nóngjiā dàn jiǎo, Li Hongzhang [chop suey](https://en.wikipedia.org/wiki/Chop_suey)
+
+<!--
+	- Li Hongzhang [chop suey](https://en.wikipedia.org/wiki/Chop_suey), 李鸿章杂碎, Lǐ Hóngzhāng zásuì  
+-->
+
+---
+layout: image
+image: https://p1-q.mafengwo.net/s11/M00/E5/D4/wKgBEFpO3ESAIUM7AAZ-bzrkvSI72.jpeg?imageView2%2F2%2Fw%2F1360%2Fq%2F90
+---
+
+# 清蒸石蛙
+
+Qīngzhēng shí wā, gedämpfter Steinfrosch
+
+<!--
+	- Gedämpfter Steinfrosch, 清蒸石蛙, Qīngzhēng shí wā
+	- Eiernockerln, 农家蛋饺, nóngjiā dàn jiǎo  
+-->
+
+---
+layout: image-right
+image: https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/China_Jinan_5207307.jpg/2560px-China_Jinan_5207307.jpg
+---
+
+# 山東菜
+
+Shāndōngcài - Küche von Shangdong 
+
+<v-clicks>
+
+- eine der einflussreichsten Küchen
+- anderer Name: "Lu Küche"
+- leichtes Aroma, frischer Geschmack
+- Thema: *leichte* und *milchige* Brühe
+- Kochtechniken wie  
+  - *bao* (爆, schnelles Braten),  
+  - *liu* (溜, bao mit Maismehl)  
+  - *pa* (扒, schmoren)  
+  - *kao* (烤, braten)  
+  - *zhu* (煮, garen)  
+- Jinan und Jiadong als lokale Unterstile
+
+</v-clicks>
+
+<!--
+- große Auswahl an Zutaten, hauptsächlich domestizierte Tier, Vögel, Meeresfrüchte und Gemüse  
+- leichtes Aroma, frischer Geschmack, Betonung der Brühen (milchig und leicht), die gut zu den Meeresfrüchten passen  
+- eine der einflussreichsten Küchen
+- Kochtechniken wie  
+  - *bao* (爆; schnelles Braten),  
+  - *liu* (溜; bao mit Maismehl)  
+  - *pa* (扒; schmoren)  
+  - *kao* (烤; braten)  
+  - *zhu* (煮; kochen)  
+- unterteilt in zwei subregionale Stile  
+  - Jinan (Verwendung von Suppe? ANMERKUNG: Mehr), Jiaodong (Meeresfrüchte mit leichtem Geschmack  
+-->
+
+--- 
+layout: image-right
+image: https://www.sprinklesandsprouts.com/wp-content/uploads/2015/04/steamed-bun5.jpg
+---
+# 山東菜
+
+Typische Zutaten
+
+<v-clicks>
+
+- [Mais](https://en.wikipedia.org/wiki/Maize) zäh, stärkehaltig und oft mit grasigem Aroma  
+- Erdnüsse (süß, geröstet)  
+- Körner wie Hirse, Weizen, Hafer, Gerste  
+- Gemüse
+- Essig  
+
+</v-clicks>
+
+<!--
+- *Zutaten*  
+	- [Mais](https://en.wikipedia.org/wiki/Maize) zäh, stärkehaltig und oft mit grasigem Aroma  
+	- Erdnüsse (süß, geröstet)  
+	- Körner wie Hirse, Weizen, Hafer, Gerste  
+	- Grundnahrungsmittel Gemüse
+	- Essig  
+-->
+
+---
+layout: image
+image: https://androidforums.com/attachments/img20161203211300-jpg.112636/
+---
+# 炸金蝉
+
+zhájīnchán, frittierte goldene [Zikade](https://en.wikipedia.org/wiki/Cicada)
+
+---
+layout: image
+image: https://upload.wikimedia.org/wikipedia/commons/1/15/Baochao_yaohua_2009_03.jpg
+---
+
+# 爆炒腰花
+
+bàochǎoyāohuā, Gebratene Schweineniere
+
+---
+layout: image
+image: https://upload.wikimedia.org/wikipedia/commons/e/e1/Jiuqu_dachang_2009_03.jpg
+---
+
+# 九曲大肠
+
+jiǔqū, Dickdarm vom Schwein
+
+---
+layout: image-right
+image: https://upload.wikimedia.org/wikipedia/commons/3/3c/Tianwangdian.jpg
+---
+
+# 福建菜 
+Fújiàn cài - Die Küche von Fujian
+
+<v-clicks>
+
+- Fujian Provinz, Hauptstadt [Fuzhou](https://en.wikipedia.org/wiki/Fuzhou)
+- frisch, mild, fleischig, nicht fettig, leicht, geschmackvoll, weich, zart, Betonung auf umami (鲜味, xiān wèi)
+- Vielzahl an Meeresfrüchten (Fische, Krustentiere und Schildkröten)
+- Einfluss durch Reisen zur See 
+- viele Brühen und Suppen
+- hohe Kultur der Kochkunst 
+- Einfluss auf taiwanesische/ südostasiatische Küche
+
+</v-clicks>
+
+<!--
+- aus der Provinz Fujian, vor allem aus deren Hauptstadt [Fuzhou] (https://en.wikipedia.org/wiki/Fuzhou)  
+- *Hintergrund*  
+	- frisch, mild, fleischig, nicht fettig, leicht, geschmackvoll, weich, zart, Betonung auf umami (鲜味, xiān wèi)  
+	- vielfältige Meeresfrüchte (große Vielfalt an lokalen Fischen, Krustentieren und Schildkröten), Köstlichkeiten aus dem Wald  
+	- die Küche ist von der oft über die Meere reisenden Fujian beeinflusst  
+	- Schwerpunkt auf Brühen und Suppen  
+	- Kultur hinter den Fertigkeiten der Köche, die die Speisen zubereiten  
+	- tiefgreifender Einfluss auf die taiwanesische und südostasiatische chinesische Küche  
+-->
+
+---
+layout: image-right
+image: https://upload.wikimedia.org/wikipedia/commons/5/57/Red_rice_wine_hong_zhao.JPG
+---
+
+# 福建菜 
+Besondere Gewürze und Zutaten
+
+<v-clicks>
+
+- Fischsoße
+- Shrimp-Paste
+- [shacha sauce](https://en.wikipedia.org/wiki/Shacha_sauce) 
+- [Weintrub](ttps://en.wikipedia.org/wiki/Lees_(fermentation))
+- Weinmarinaden
+
+</v-clicks>
+
+<!--
+- *Lebensmittel*  
+	- Gewürze wie Fischsauce, Krabbenpaste, Zucker, [Shacha-Sauce] (https://en.wikipedia.org/wiki/Shacha_sauce), Weintrub  
+	- mit Wein marinierte Gerichte  
+	- hohe Qualität der Brühen
+-->
+
+---
+layout: image
+image: https://upload.wikimedia.org/wikipedia/commons/7/74/Bakutteh.jpg
+---
+
+# 肉骨茶
+ròu gŭ chá, Bak kut teh
+
+---
+layout: image
+image: https://c1.staticflickr.com/8/7536/27595565891_97619b4074_h.jpg
+---
+
+# 板面
+bǎnmiàn, Banmian
+
+---
+layout: image
+image: https://upload.wikimedia.org/wikipedia/commons/a/a9/Guangzhou-Beihai-shaochong-0459.jpg
+---
+
+# 土笋凍
+Tǔ sǔn dòng, Wurm Gelee
+
+
+<!--
+	- *bekannte Gerichte*  
+		- [Buddha jumps over the wall, 佛跳墙, fó tiào qiáng](https://en.wikipedia.org/wiki/Buddha_Jumps_Over_the_Wall)  
+		- [Bak kut teh, 肉骨茶, ròu gŭ chá](https://en.wikipedia.org/wiki/Bak_kut_teh) (pork rib)
+		- [Banmian, 板面, bǎnmiàn](https://en.wikipedia.org/wiki/Banmian) (very popular noodle soup) 
+		- in [Xiamen](https://en.wikipedia.org/wiki/Xiamen), wird [Wurmgelee](https://en.wikipedia.org/wiki/Sipunculus_nudus) serviert [Bild](https://en.wikipedia.org/wiki/File:Sipunculid_worm_jelly.jpg)
+-->
+
+---
+layout: image-right
+image: https://upload.wikimedia.org/wikipedia/commons/7/70/Huqiu-Tower.jpg
+---
+
+# 江苏菜 
+Jiāngsū cài - Die Küche von Jiangsu
+
+<v-clicks>
+
+- Küche der Provinz von Jiangsu
+- weich, aber nicht breiig
+- Auswahl der Zutaten je nach Saison  
+- häufig Fisch
+- verschiedene subregionale Stile
+- Nantong-Stil (Vielfalt an Meeresfrüchten, Schnittpunkt von Fluss Hao und Jangtse und Gelbem Meer)  
+
+</v-clicks>
+
+<!--
+- stammt aus der einheimischen Küche der [Provinz Jiangsu](https://en.wikipedia.org/wiki/Jiangsu)  
+- weich, aber nicht breiig, konzentriert sich auf die Erhitzungstemperatur  
+- *Hintergrund*  
+	- Fisch ist eine sehr häufige Zutat  
+	- Auswahl der Zutaten je nach Saison  
+	- Die Küche von Shanghai ist sehr ähnlich, da Shanghai ein Teil von Jiangsu war  
+	- gehört zusammen mit Kantonesisch, Shandong und Sichuan zu den einflussreichsten Küchen in China  
+	- verschiedene subregionale Stile; insbesondere der Wuxi-Stil, der durch die Zugabe von Zucker und Sojasauce zu vielen Gerichten gekennzeichnet ist  
+	- Nantong-Stil (Vielfalt an Meeresfrüchten, Schnittpunkt von Hao, Jangtse und Gelbem Meer)  
+-->
+
+---
+layout: image
+image: https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimg.zcool.cn%2Fcommunity%2F0166d45be5a1a8a8012092525ff7c0.jpg%401280w_1l_2o_100sh.jpg&f=1&nofb=1&ipt=199f8c42ccdb4772b637881df0e9357c9ecdbd2872f96ae44d55db8b66911b55&ipo=images
+---
+# 红烧排骨
+hóngshāo páigǔ, geschmorte Spare-Ribs
+
+---
+layout: image
+image: https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ffarm6.staticflickr.com%2F5044%2F5373902844_01dea0713d_o.jpg&f=1&nofb=1&ipt=82a6fcb5c59de13f758d7c31f72120c6f2b20193fd4d32c6d87e62665476fd4a&ipo=images
+---
+
+# 油面筋
+yóu miàn jīn - Frittierte Glutenbällchen
+
+---
+layout: image
+image: https://upload.wikimedia.org/wikipedia/commons/8/80/Xiaolongbao-breakfast.jpg
+---
+
+# 无锡小笼包
+Wúxī xiǎolóngbāo - [Wuxi](https://en.wikipedia.org/wiki/Wuxi)-Style [xiaolongbao](https://en.wikipedia.org/wiki/Xiaolongbao)
+
+<!--
+- *Lebensmittel*  
+	- Geschmorte Spareribs, 红烧排骨, hóngshāo páigǔ  
+	- Frittierte Glutenbällchen, 油面筋, yóu miàn jīn  
+	- [Wuxi](https://en.wikipedia.org/wiki/Wuxi)-Style [xiaolongbao](https://en.wikipedia.org/wiki/Xiaolongbao), 无锡小笼包, Wúxī xiǎolóngbāo
+-->
+
+---
+layout: image-right
+image: https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Yuelu_academy.jpg/2560px-Yuelu_academy.jpg
+---
+
+# 湖南菜
+Húnán cài - Die Küche von Hunan 
+
+<v-clicks>
+
+- Hunan Provinz, Fluss Xiang, Diangting-See
+- scharfe, würzige, frische Aromen, kräftige Farben  
+- 干辣, gān là, "trocken und würzig"  
+- seit dem 17. Jh. Vermischung verschiedener lokaler Stile
+- mehr Chili als in Sichuanesischer Küche, weniger ölig
+- Menü wechselt mit den Jahreszeiten
+
+</v-clicks>
+
+<!--
+- bekannt für scharfe und würzige Aromen, frisches Aroma, kräftige Farben  
+- 干辣, gān là, "trocken und würzig"  
+- *Hintergrund*  
+	- Kochtraditionen reichen bis ins 17. Jahrhundert zurück  
+	- sich entwickelnde lokale Küchen, die schließlich ihren eigenen einzigartigen Stil bilden  
+	- verschiedene lokale Stile wie der Xiang-Fluss-Stil, der Dongting-See-Stil, der westliche Hunan-Stil  
+	- Verwendung von Chilischoten, Knoblauch  
+	- oft mehr Chili als in der vergleichbaren Sichuan-Küche, weniger ölig  
+	- das Menü wechselt mit den Jahreszeiten (z.B. in einem heißen und feuchten Sommer: kalte Pasteten, kaltes Fleisch, im Winter ein heißer Topf)  
+-->
+
+---
+layout: image
+image: https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fi2.chuimg.com%2Fb07f47568aa611e6a9a10242ac110002_1280w_1280h.jpg%3FimageView2%2F2%2Fw%2F660%2Finterlace%2F1%2Fq%2F90&f=1&nofb=1&ipt=89d42d526fcfda46d7e2d0c047addc7aed50d86b7d4242c0d93d14efc203ae2c&ipo=images
+---
+
+# 東安雞
+dōng'ān zǐjī, [Dong'an Huhn](https://en.wikipedia.org/wiki/Dong%27an_chicken)
+
+---
+layout: image-right
+image: https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Changsha-style_Stinky_Tofu_at_Huogongdian_%2820180222183104%29.jpg/390px-Changsha-style_Stinky_Tofu_at_Huogongdian_%2820180222183104%29.jpg
+---
+# 长沙臭豆腐
+chǎngshā chòu dòufu, Changsha fermentierter Tofu
+
+---
+layout: image-right
+image: https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/%E5%A4%8D%E4%BB%B6_IMG_20180709_095843.jpg/1280px-%E5%A4%8D%E4%BB%B6_IMG_20180709_095843.jpg
+---
+
+# 永丰辣酱
+yǒng fēng làjiàng, [Yongfeng Chilisauce](https://en.wikipedia.org/wiki/Yongfeng_chili_sauce)
+
+
+<!--
+- *Lebensmittel*  
+	- Geschmortes Rindfleisch nach Changde-Art mit Reisnudeln, 常德牛肉粉, chángdé niúròu fěn  
+	- [Changsha Stinkender Tofu](https://en.wikipedia.org/wiki/Changsha_stinky_tofu), 长沙臭豆腐, chǎngshā chòu dòufu  
+	- [Dong'an Huhn](https://en.wikipedia.org/wiki/Dong%27an_chicken), 东安子鸡, dōng'ān zǐjī  
+	- [Maos geschmortes Schweinefleisch](https://en.wikipedia.org/wiki/Hongshao_rou), 毛氏红烧肉, Máo shì hóngshāo ròu  
+-->
+
+---
+layout: image-right
+image: https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/04_Zhejiang_tea_05.1987.jpg/1280px-04_Zhejiang_tea_05.1987.jpg
+---
+
+# 浙江菜 
+Zhèjiāng cài - Die Küche von Zhejiang
+
+<v-clicks>
+
+- vier verschiedene Stile,
+    - [Hangzhou](https://en.wikipedia.org/wiki/Hangzhou)
+    - [Shaoxing](https://en.wikipedia.org/wiki/Shaoxing)
+    - [Ningbo](https://en.wikipedia.org/wiki/Ningbo)
+    - [Wenzhou](https://en.wikipedia.org/wiki/Wenzhou)  
+- stammt von der ursprünglichen Küche in der [Provinz Zhejiang](https://en.wikipedia.org/wiki/Zhejiang)  
+- nicht fettig, frischer und weicher Geschmack, milder Duft  
+
+</v-clicks>
+
+<!--
+- vier verschiedene Stile,
+    - [Hangzhou](https://en.wikipedia.org/wiki/Hangzhou)
+    - [Shaoxing](https://en.wikipedia.org/wiki/Shaoxing)
+    - [Ningbo](https://en.wikipedia.org/wiki/Ningbo)
+    - [Wenzhou](https://en.wikipedia.org/wiki/Wenzhou)  
+- stammt von der ursprünglichen Küche in der [Provinz Zhejiang](https://en.wikipedia.org/wiki/Zhejiang)  
+- nicht fettig, frischer und weicher Geschmack, milder Duft  
+-->
+
+
+---
+layout: image
+image: https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.IpG5rM9nnsxPsRLGtGHP_QHaHa%26pid%3DApi&f=1&ipt=4df410c299f502b6986c28a114b82209ebe8c990a82202ba48b6084980477294&ipo=images
+---
+# 叫化鸡
+jiàohuā jī - Bettlerhuhn
+
+---
+layout: image-right
+image: https://upload.wikimedia.org/wikipedia/commons/f/fd/BCfood12.JPG
+---
+
+# 东坡肉 
+Dōngpō ròu, Dongpo Pork  
+
+<!--
+  - [Bettlerhuhn, 叫化鸡, jiàohuā jī](https://en.wikipedia.org/wiki/Beggar%27s_chicken)  
+	- [Dongpo Pork, 东坡肉, Dōngpō ròu](https://en.wikipedia.org/wiki/Dongpo_pork)  
+	- [Wenzhou Schweinepulver, 温州猪脏粉, Wēnzhōu zhūzàngfěn](https://en.wikipedia.org/wiki/Wenzhou_pig_powder)  
+-->
