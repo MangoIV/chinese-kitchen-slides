@@ -68,7 +68,6 @@ drawings:
 
 </v-clicks>
 
-<!--
 - vor 618 n. Chr.  
 - Die Küche wird zum kritischen Thema, da sie durch die traditionelle Medizin motiviert ist  
 - in Nordchina wurde als erstes [Hirse](https://en.wikipedia.org/wiki/Millet) angebaut  
@@ -86,7 +85,6 @@ drawings:
 
 - Während sich das chinesische Reich ausbreitete, wurde die Kochkunst vor allem an und über die 
   Kanäle transportiert
--->
 
 --- 
 layout: image-right
@@ -109,33 +107,6 @@ image: https://upload.wikimedia.org/wikipedia/commons/9/91/Wu_Xing.png
 
 </v-clicks>
 
-<!-- 
-- Lebensmittel sollten [Qi] (https://en.wikipedia.org/wiki/Qi) spenden, 
-  [Yin und Yang](https://en.wikipedia.org/wiki/Yin_and_yang) erhalten, die 
-  [vier Naturen](https://en.wikipedia.org/wiki/Chinese_herbology#Four_Natures) und die 
-  [fünf Geschmacksrichtungen](https://en.wikipedia.org/wiki/Chinese_herbology#Five_Flavors) ausgleichen  
-- während der [Han-Dynastie](https://en.wikipedia.org/wiki/Han_dynasty) entwickelten sich Zubereitungsmethoden für Militärrationen  
-- während der [südlichen und nördlichen Dynastien](https://en.wikipedia.org/wiki/Southern_and_Northern_dynasties), Mischung der Küchen  
--->
-
---- 
-layout: image-right
-image: https://upload.wikimedia.org/wikipedia/commons/5/58/Chinese_rice_congee.jpg
----
-
-# Geschichte der chinesischen Küche
-
-<v-clicks>
-
-- *Song Dynastie* (960 - 1279): Migration sorgt dafür, dass Reis, Soja Soße und Congee (白粥, báizhōu) an Bedeutung gewinnen
-- *Yuan* (1279 - 1368) und *Qing* (1616 - 1919) Dynastien: Einfluss von mongolischer und muslimisch geprägter
-  Küche
-- Heutzutage: Vormarsch von Fastfood wie gebratene Nudeln, gebratener Reis, Gaifan (盖饭, gàifàn)
-
-</v-clicks>
-
-
-<!--
 
 nach 618 n. Chr.  
 - während der Song-Dynastie große Wanderungsbewegungen, die zu einer zunehmenden Bedeutung von Reis und Congee führten  
@@ -143,7 +114,6 @@ nach 618 n. Chr.
 - während der Yuan- und der Qing-Dynastie großer Einfluss der mongolischen Küche und der Küche, die kein Schweinefleisch verwendete, da viele muslimische Gemeinschaften entstanden  
 - Heutzutage wird Fast Food wie [gebratene Nudeln](https://en.wikipedia.org/wiki/Fried_noodles), [gebratener Reis](https://en.wikipedia.org/wiki/Fried_rice) und [gaifan](https://en.wikipedia.org/wiki/Gaifan) immer beliebter (erhöhtes Lebenstempo)
 
--->
 
 ---
 layout: image
@@ -167,7 +137,6 @@ layout: center
 
 </v-clicks>
 
-<!--
 Essetikette:
 - junge warten auf alte Person
 - Schüssel nicht am Boden halten (Betteln)
@@ -182,7 +151,6 @@ Essetikette:
 Anderes: 
 - Grundnahrungsmittel sagt über Herkunft aus
 - essenszeiten und Anzahl sind sehr ähnlich zu Europa
--->
 
 ---
 
@@ -208,7 +176,6 @@ image: https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Canton_Tower_20
 
 </v-clicks>
 
-<!--
 - [Kantonesische Küche](https://en.wikipedia.org/wiki/Cantonese_cuisine)  
 - 廣東菜 - Guǎngdōng cài - Kantonesische Küche  
 - hauptsächlich in der Provinz Guangdong (Guangzhou (größte städtische Agglomeration mit 65 Millionen Einwohnern)), Karte anzeigen  
@@ -225,7 +192,6 @@ image: https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Canton_Tower_20
 - *Nahrungsmittel*  
 	- Zucker, Salz, Sojasauce, Reiswein, Maisstärke, Essig, Frühlingszwiebeln, Sesamöl werden zur Geschmacksverstärkung verwendet  
 	- Knoblauch, Ingwer, Chilischoten, Fünf-Gewürze-Pulver, schwarzer Pfeffer, Sternanis werden verwendet  
--->
 
 ---
 layout: image-right
@@ -258,32 +224,8 @@ Typische Soßen
 
 </v-clicks>
 
-<!--
-	- typische konservierte Zutaten:  
-		- [Jahrhundert-Ei, 皮蛋, pídàn](https://en.wikipedia.org/wiki/Century_egg)  
-		- Gesalzenes Entenei, 咸蛋, xiándàn](https://en.wikipedia.org/wiki/Salted_duck_egg)  
-		- Chinesische Wurst, 腊肠, làcháng](https://en.wikipedia.org/wiki/Chinese_sausage)  
-		- [Fermentierter Tofu, 腐乳, fǔrǔ](https://en.wikipedia.org/wiki/Fermented_bean_curd)  
-	- typische Soßen:  
-		- [Schwarze Bohnensauce, 蒜蓉豆豉酱, suànróng dòuchǐjiàng](https://en.wikipedia.org/wiki/Douchi)  
-		- [Char siu sauce, 叉烧酱, chāshāojiàng](https://en.wikipedia.org/wiki/Char_siu)  
-		- [Hoisin-Sauce, 海鲜酱, hǎixiānjiàng](https://en.wikipedia.org/wiki/Hoisin_sauce)  
-		- [Süß-saure Soße, 糖醋酱, tángcùjiàng](https://en.wikipedia.org/wiki/Sweet_and_sour#Chinese_cuisine)  
--->
-
---- 
-layout: image 
-image: https://upload.wikimedia.org/wikipedia/commons/d/db/Cuisine_of_China_0055.JPG
----
-
-# 广式炒饭
-
- guǎng shì chǎofàn, Gebratener Reis nach kantonesischer Art
-
-<!--
 	- traditionelle Gerichte:  
 		- Gebratener Reis nach kantonesischer Art, 广式炒饭, guǎng shì chǎofàn ([Bild](https://en.wikipedia.org/wiki/File:Cuisine_of_China_0055.JPG))  
--->
 --- 
 layout: image 
 image: https://upload.wikimedia.org/wikipedia/commons/4/46/Chinese_steamed_eggs_by_Kanko.jpg
@@ -294,9 +236,7 @@ image: https://upload.wikimedia.org/wikipedia/commons/4/46/Chinese_steamed_eggs_
 zhēngshuǐdàn, Gedämpftes Ei
 
 
-<!--
 - [Gedämpftes Ei, 蒸水蛋, zhēngshuǐdàn](https://en.wikipedia.org/wiki/Chinese_steamed_eggs) ([Bild](https://en.wikipedia.org/wiki/File:Chinese_steamed_eggs_(cropped).jpg))  
--->
 
 --- 
 layout: image
@@ -322,9 +262,7 @@ image: https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Siu_lap_platter
 
 </v-clicks>
 
-<!--
 		- Siu laap, 烧腊 einschließlich [Siu mei](https://en.wikipedia.org/wiki/Siu_mei) (chinesische Rotisserie) und [Lou mei](https://en.wikipedia.org/wiki/Lou_mei) (Organe, übrig gebliebene Teile)  
--->
 
 ---
 layout: image-right
@@ -347,14 +285,12 @@ Andere Gerichte
 
 </v-clicks>
 
-<!--
 		- [Congee](https://en.wikipedia.org/wiki/Congee) mit magerem Schweinefleisch und [Jahrhundert-Ei](https://en.wikipedia.org/wiki/Century_egg), 皮蛋瘦肉粥, pídàn shòuròuzhōu, ([Bild](https://en.wikipedia.org/wiki/File:Pork_preserved_duck_egg_congee.jpg))  
 		- Gebratener [Wasserspinat](https://en.wikipedia.org/wiki/Ipomoea_aquatica) mit geschreddertem Chili und fermentiertem Tofu, 椒丝腐乳通菜, jiāosī fǔrǔ tōngcài ([Bild](https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Rau_mu%E1%BB%91ng_x%C3%A0o_t%E1%BB%8Fi.jpg/150px-Rau_mu%E1%BB%91ng_x%C3%A0o_t%E1%BB%8Fi.jpg))  
 	- andere Gerichte  
 		- verschiedene frittierte Gerichte, Suppen, frische Meeresfrüchte (an der südchinesischen Meeresküste), Nudelgerichte (frittiert oder in einer Suppenbrühe),  
 		- Delikatessen, z.T. Teile von seltenen oder gefährdeten Tieren; löst Kontroversen aus ([Haifischflossensuppe, 鱼翅汤, yúchì tāng](https://en.wikipedia.org/wiki/Shark_fin_soup); die Behauptung, Haifischflossen würden Krebs heilen, wofür es keine Beweise gibt, fördert den Verkauf)  
 		- [Qualle, 海蜇, hǎizhé](https://en.wikipedia.org/wiki/Jellyfish#Culinary)
--->
 
 --- 
 layout: image-right
@@ -376,7 +312,6 @@ Sìchuān cài - Die Küche von Sichuan
 
 </v-clicks>
 
-<!--
 - aus der [Provinz Sichuan](https://en.wikipedia.org/wiki/Sichuan), die wegen ihres Reichtums an natürlichen Ressourcen und Nahrungsmitteln "himmlisches Land" genannt wird  
 - *Hintergrund*  
 	- im Mittelalter vor allem mittelöstliche Feldfrüchte ([Saubohnen](https://en.wikipedia.org/wiki/Broad_beans), [Sesam](https://en.wikipedia.org/wiki/Sesame) und [Walnüsse](https://en.wikipedia.org/wiki/Walnuts))  
@@ -390,7 +325,6 @@ Sìchuān cài - Die Küche von Sichuan
 	- Reis, Gemüse, Pilze  
 	- das häufigste Fleisch ist Schweinefleisch, Rindfleisch ist weiter verbreitet als in anderen Küchen, verschiedene Organe werden verwendet, auch Kaninchen ist beliebt  
 	- viele eingelegte, gesalzene oder getrocknete Lebensmittel  
--->
 
 ---
 layout: image
@@ -400,10 +334,8 @@ image: https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/5811-Linxia-Cit
 # 花椒
 huājiāo, Sichuan-Pfeffer 'Blumenpfeffer'
 
-<!--
 	- wichtigstes und bekanntestes Gewürz ist der [Sichuan-Pfeffer](https://en.wikipedia.org/wiki/Sichuan_pepper) (花椒; huājiāo; 'Blumenpfeffer')  
 	- Sichuan-Hotpot als sehr beliebtes und repräsentatives Gericht aus Sichuan
--->
 
 ---
 layout: image
@@ -463,7 +395,6 @@ image: https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Ella_me_pregunt
 
 </v-clicks>
 
-<!--
 - 安徽菜 - Ānhuī cài - Anhui Küche  
 - *Hintergrund*  
 	- abgeleitet von einheimischen Kochstilen aus der [Huangshan](https://en.wikipedia.org/wiki/Huangshan) Region und der südlichen [Provinz Anhui](https://en.wikipedia.org/wiki/Anhui).  
@@ -472,7 +403,6 @@ image: https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Ella_me_pregunt
 		- Region [Jangtse-Fluss](https://en.wikipedia.org/wiki/Yangtze_River)  
 		- Region [Huai-Fluss](https://en.wikipedia.org/wiki/Huai_River)  
 		- südliche [Anhui](https://en.wikipedia.org/wiki/Anhui) Region  
--->
 
 ---
 layout: image
@@ -483,10 +413,8 @@ image: https://upload.wikimedia.org/wikipedia/commons/c/ca/Stinkender_Tofu_1.JPG
 
 bāgōngshān chòu dòufǔ, "stinkender Tofu"
 
-<!--
 - *Lebensmittel*  
 	- Bagongshan [stinkender Tofu, 八公山臭豆腐, bāgōngshān chòu dòufǔ](https://en.wikipedia.org/wiki/Stinky_tofu)  
--->
 
 ---
 layout: image
@@ -497,9 +425,7 @@ image: https://www.chinesefoodwiki.org/images/6/62/Chop_Suey_%283%29.jpg
 
 nóngjiā dàn jiǎo, Li Hongzhang [chop suey](https://en.wikipedia.org/wiki/Chop_suey)
 
-<!--
 	- Li Hongzhang [chop suey](https://en.wikipedia.org/wiki/Chop_suey), 李鸿章杂碎, Lǐ Hóngzhāng zásuì  
--->
 
 ---
 layout: image
@@ -510,10 +436,8 @@ image: https://p1-q.mafengwo.net/s11/M00/E5/D4/wKgBEFpO3ESAIUM7AAZ-bzrkvSI72.jpe
 
 Qīngzhēng shí wā, gedämpfter Steinfrosch
 
-<!--
 	- Gedämpfter Steinfrosch, 清蒸石蛙, Qīngzhēng shí wā
 	- Eiernockerln, 农家蛋饺, nóngjiā dàn jiǎo  
--->
 
 ---
 layout: image-right
@@ -540,7 +464,6 @@ Shāndōngcài - Küche von Shangdong
 
 </v-clicks>
 
-<!--
 - große Auswahl an Zutaten, hauptsächlich domestizierte Tier, Vögel, Meeresfrüchte und Gemüse  
 - leichtes Aroma, frischer Geschmack, Betonung der Brühen (milchig und leicht), die gut zu den Meeresfrüchten passen  
 - eine der einflussreichsten Küchen
@@ -552,7 +475,6 @@ Shāndōngcài - Küche von Shangdong
   - *zhu* (煮; kochen)  
 - unterteilt in zwei subregionale Stile  
   - Jinan (Verwendung von Suppe? ANMERKUNG: Mehr), Jiaodong (Meeresfrüchte mit leichtem Geschmack  
--->
 
 --- 
 layout: image-right
@@ -572,14 +494,12 @@ Typische Zutaten
 
 </v-clicks>
 
-<!--
 - *Zutaten*  
 	- [Mais](https://en.wikipedia.org/wiki/Maize) zäh, stärkehaltig und oft mit grasigem Aroma  
 	- Erdnüsse (süß, geröstet)  
 	- Körner wie Hirse, Weizen, Hafer, Gerste  
 	- Grundnahrungsmittel Gemüse
 	- Essig  
--->
 
 ---
 layout: image
@@ -627,7 +547,6 @@ Fújiàn cài - Die Küche von Fujian
 
 </v-clicks>
 
-<!--
 - aus der Provinz Fujian, vor allem aus deren Hauptstadt [Fuzhou] (https://en.wikipedia.org/wiki/Fuzhou)  
 - *Hintergrund*  
 	- frisch, mild, fleischig, nicht fettig, leicht, geschmackvoll, weich, zart, Betonung auf umami (鲜味, xiān wèi)  
@@ -636,7 +555,6 @@ Fújiàn cài - Die Küche von Fujian
 	- Schwerpunkt auf Brühen und Suppen  
 	- Kultur hinter den Fertigkeiten der Köche, die die Speisen zubereiten  
 	- tiefgreifender Einfluss auf die taiwanesische und südostasiatische chinesische Küche  
--->
 
 ---
 layout: image-right
@@ -656,12 +574,10 @@ Besondere Gewürze und Zutaten
 
 </v-clicks>
 
-<!--
 - *Lebensmittel*  
 	- Gewürze wie Fischsauce, Krabbenpaste, Zucker, [Shacha-Sauce] (https://en.wikipedia.org/wiki/Shacha_sauce), Weintrub  
 	- mit Wein marinierte Gerichte  
 	- hohe Qualität der Brühen
--->
 
 ---
 layout: image
@@ -671,9 +587,7 @@ image: https://upload.wikimedia.org/wikipedia/commons/7/74/Bakutteh.jpg
 # 肉骨茶
 ròu gŭ chá, Bak kut teh
 
-<!--
 - is a pork rib dish cooked in broth popularly served in Malaysia and Singapore where there is a predominant Hoklo and Teochew community
--->
 
 ---
 layout: image
@@ -692,13 +606,11 @@ image: https://upload.wikimedia.org/wikipedia/commons/a/a9/Guangzhou-Beihai-shao
 Tǔ sǔn dòng, Wurm Gelee
 
 
-<!--
 	- *bekannte Gerichte*  
 		- [Buddha jumps over the wall, 佛跳墙, fó tiào qiáng](https://en.wikipedia.org/wiki/Buddha_Jumps_Over_the_Wall)  
 		- [Bak kut teh, 肉骨茶, ròu gŭ chá](https://en.wikipedia.org/wiki/Bak_kut_teh) (pork rib)
 		- [Banmian, 板面, bǎnmiàn](https://en.wikipedia.org/wiki/Banmian) (very popular noodle soup) 
 		- in [Xiamen](https://en.wikipedia.org/wiki/Xiamen), wird [Wurmgelee](https://en.wikipedia.org/wiki/Sipunculus_nudus) serviert [Bild](https://en.wikipedia.org/wiki/File:Sipunculid_worm_jelly.jpg)
--->
 
 ---
 layout: image-right
@@ -719,7 +631,6 @@ Jiāngsū cài - Die Küche von Jiangsu
 
 </v-clicks>
 
-<!--
 - stammt aus der einheimischen Küche der [Provinz Jiangsu](https://en.wikipedia.org/wiki/Jiangsu)  
 - weich, aber nicht breiig, konzentriert sich auf die Erhitzungstemperatur  
 - *Hintergrund*  
@@ -729,7 +640,6 @@ Jiāngsū cài - Die Küche von Jiangsu
 	- gehört zusammen mit Kantonesisch, Shandong und Sichuan zu den einflussreichsten Küchen in China  
 	- verschiedene subregionale Stile; insbesondere der Wuxi-Stil, der durch die Zugabe von Zucker und Sojasauce zu vielen Gerichten gekennzeichnet ist  
 	- Nantong-Stil (Vielfalt an Meeresfrüchten, Schnittpunkt von Hao, Jangtse und Gelbem Meer)  
--->
 
 ---
 layout: image
@@ -754,12 +664,10 @@ image: https://upload.wikimedia.org/wikipedia/commons/8/80/Xiaolongbao-breakfast
 # 无锡小笼包
 Wúxī xiǎolóngbāo - [Wuxi](https://en.wikipedia.org/wiki/Wuxi)-Style [xiaolongbao](https://en.wikipedia.org/wiki/Xiaolongbao)
 
-<!--
 - *Lebensmittel*  
 	- Geschmorte Spareribs, 红烧排骨, hóngshāo páigǔ  
 	- Frittierte Glutenbällchen, 油面筋, yóu miàn jīn  
 	- [Wuxi](https://en.wikipedia.org/wiki/Wuxi)-Style [xiaolongbao](https://en.wikipedia.org/wiki/Xiaolongbao), 无锡小笼包, Wúxī xiǎolóngbāo
--->
 
 ---
 layout: image-right
@@ -779,8 +687,6 @@ Húnán cài - Die Küche von Hunan
 - Menü wechselt mit den Jahreszeiten
 
 </v-clicks>
-
-<!--
 - bekannt für scharfe und würzige Aromen, frisches Aroma, kräftige Farben  
 - 干辣, gān là, "trocken und würzig"  
 - *Hintergrund*  
@@ -790,7 +696,6 @@ Húnán cài - Die Küche von Hunan
 	- Verwendung von Chilischoten, Knoblauch  
 	- oft mehr Chili als in der vergleichbaren Sichuan-Küche, weniger ölig  
 	- das Menü wechselt mit den Jahreszeiten (z.B. in einem heißen und feuchten Sommer: kalte Pasteten, kaltes Fleisch, im Winter ein heißer Topf)  
--->
 
 ---
 layout: image
@@ -816,13 +721,11 @@ image: https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/%E5%A4%8D%E4%BB
 yǒng fēng làjiàng, [Yongfeng Chilisauce](https://en.wikipedia.org/wiki/Yongfeng_chili_sauce)
 
 
-<!--
 - *Lebensmittel*  
 	- Geschmortes Rindfleisch nach Changde-Art mit Reisnudeln, 常德牛肉粉, chángdé niúròu fěn  
 	- [Changsha Stinkender Tofu](https://en.wikipedia.org/wiki/Changsha_stinky_tofu), 长沙臭豆腐, chǎngshā chòu dòufu  
 	- [Dong'an Huhn](https://en.wikipedia.org/wiki/Dong%27an_chicken), 东安子鸡, dōng'ān zǐjī  
 	- [Maos geschmortes Schweinefleisch](https://en.wikipedia.org/wiki/Hongshao_rou), 毛氏红烧肉, Máo shì hóngshāo ròu  
--->
 
 ---
 layout: image-right
@@ -844,7 +747,6 @@ Zhèjiāng cài - Die Küche von Zhejiang
 
 </v-clicks>
 
-<!--
 - vier verschiedene Stile,
     - [Hangzhou](https://en.wikipedia.org/wiki/Hangzhou)
     - [Shaoxing](https://en.wikipedia.org/wiki/Shaoxing)
@@ -852,7 +754,6 @@ Zhèjiāng cài - Die Küche von Zhejiang
     - [Wenzhou](https://en.wikipedia.org/wiki/Wenzhou)  
 - stammt von der ursprünglichen Küche in der [Provinz Zhejiang](https://en.wikipedia.org/wiki/Zhejiang)  
 - nicht fettig, frischer und weicher Geschmack, milder Duft  
--->
 
 
 ---
@@ -870,11 +771,9 @@ image: https://upload.wikimedia.org/wikipedia/commons/f/fd/BCfood12.JPG
 # 东坡肉 
 Dōngpō ròu, Dongpo Pork  
 
-<!--
   - [Bettlerhuhn, 叫化鸡, jiàohuā jī](https://en.wikipedia.org/wiki/Beggar%27s_chicken)  
 	- [Dongpo Pork, 东坡肉, Dōngpō ròu](https://en.wikipedia.org/wiki/Dongpo_pork)  
 	- [Wenzhou Schweinepulver, 温州猪脏粉, Wēnzhōu zhūzàngfěn](https://en.wikipedia.org/wiki/Wenzhou_pig_powder)  
--->
 
 --- 
 layout: center
@@ -892,10 +791,8 @@ layout: center
 
 </v-clicks>
 
-<!--
 - https://www.ikud.de/glossar/kulturdimensionen-geert-hofstede.html
 - https://de.wikipedia.org/wiki/Geert_Hofstede
--->
 
 ---
 
@@ -918,9 +815,7 @@ layout: center
 </v-clicks>
 
 
-<!--
 - power distance index
--->
 
 ---
 
@@ -939,38 +834,7 @@ layout: center
 
 </v-clicks>
 
-<!-- 
-- Individualismus: Kleinfamilie
-- Kollektivismus: Treue erwartet, gewünscht, Großfamilie
-- *low-context* vs *high-context* communication
-- De 67, Canada und USA um 90
-- individualism vs collectivism
--->
-
----
-
-# Maskulinität - Femininität (`MAS`)
-
-> Welche Rollenverteilung herrscht in der Gesellschaft vor?
-
-<v-clicks>
-
-- Einteilung in "klassisch weibliche" und "klassisch männliche" Aufgaben/ Rollen/ Werte
-- **weiblich**: 
-    - gleichwertige Rollenverteilung
-    - bspw. skandinavische Länder
-    - Beziehungs- und Kooperationsorientierung
-- **männlich**
-    - maskulin bestimmte, klare Rollenverteilung
-    - Unterscheidung zwischen "Frauen- und Männerarbeit"
-    - leistungsorientiertes Gesellschaftsbild
-
-</v-clicks>
-
-
-<!--
 - masculinity vs feminitity
--->
 ---
 
 # Unsicherheitsvermeidung (`UAI`)
@@ -988,9 +852,7 @@ layout: center
 
 </v-clicks>
 
-<!--
 - uncertainty avoidance index
--->
 
 ---
 
@@ -1009,9 +871,7 @@ layout: center
 
 </v-clicks>
 
-<!--
 - long term orientation
--->
 
 ---
 
@@ -1030,9 +890,7 @@ layout: center
 </v-clicks>
 
 
-<!--
 - indulgence vs restraint
--->
 
 --- 
 layout: center 
